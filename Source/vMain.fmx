@@ -4,6 +4,7 @@ object ViewMain: TViewMain
   Caption = 'ViewMain'
   ClientHeight = 480
   ClientWidth = 640
+  Position = OwnerFormCenter
   FormFactor.Width = 320
   FormFactor.Height = 480
   FormFactor.Devices = [Desktop]
