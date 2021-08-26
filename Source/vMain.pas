@@ -29,7 +29,7 @@ uses
 
 function TViewMain.SubscribeController: TControllerFMX;
 begin
-  Result := Controller;
+  Result := gController;
 end;
 
 end.
