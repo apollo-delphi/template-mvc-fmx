@@ -136,6 +136,10 @@
             <FormType>fmx</FormType>
         </DCCReference>
         <DCCReference Include="cController.pas"/>
+        <DCCReference Include="..\Vendors\Apollo_MVC_FMX\Apollo_MVC_FMX.pas">
+            <Form>ViewFMXBase</Form>
+            <FormType>fmx</FormType>
+        </DCCReference>
         <DCCReference Include="..\Vendors\Apollo_MVC_Core\Apollo_MVC_Core.pas"/>
         <BuildConfiguration Include="Release">
             <Key>Cfg_2</Key>

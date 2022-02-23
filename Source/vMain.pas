@@ -3,15 +3,24 @@ unit vMain;
 interface
 
 uses
-  System.SysUtils, System.Types, System.UITypes, System.Classes, System.Variants,
-  FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs,
-  Apollo_MVC_FMX;
+  Apollo_MVC_Core,
+  Apollo_MVC_FMX,
+  FMX.Controls,
+  FMX.Dialogs,
+  FMX.Forms,
+  FMX.Graphics,
+  FMX.Types,
+  System.Classes,
+  System.SysUtils,
+  System.Types,
+  System.UITypes,
+  System.Variants;
 
 type
   TViewMain = class(TViewFMXMain)
   private
   protected
-    function SubscribeController: TControllerFMX; override;
+    procedure LinkToController(out aController: TControllerAbstract); override;
   public
   end;
 
@@ -27,9 +36,11 @@ uses
 
 { TViewMain }
 
-function TViewMain.SubscribeController: TControllerFMX;
+procedure TViewMain.LinkToController(out aController: TControllerAbstract);
 begin
-  Result := gController;
+  inherited;
+
+  aController := gController;
 end;
 
 end.

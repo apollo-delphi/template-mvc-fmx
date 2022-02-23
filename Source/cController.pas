@@ -3,11 +3,13 @@ unit cController;
 interface
 
 uses
-  Apollo_MVC_FMX;
+  Apollo_MVC_Core;
 
 type
-  TController = class(TControllerFMX)
+{$M+}
+  TController = class(TControllerAbstract)
   end;
+{$M-}
 
 var
   gController: TController;
